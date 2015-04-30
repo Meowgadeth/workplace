@@ -8,7 +8,6 @@ public class ComputeTransition {
 		char[] alph = new char[]{'a','b'};
 		app.run(input, alph);
 	}
-	
 	public void run(String p, char[] A){
 		int m = p.length();
 		int n = A.length;
@@ -25,12 +24,10 @@ public class ComputeTransition {
 		}
 		printResult(result,n);
 	}
-	
 	public boolean suffixOf(String suffix, String src){
 		int match = suffix.length();
 		return suffix.equals(src.substring(src.length()-match));
 	}
-	
 	public void printResult(int[][] result, int n){
 		for (int i = 0; i < result[0].length; i++){
 			System.out.print(i+ " : ");
