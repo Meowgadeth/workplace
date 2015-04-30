@@ -23,6 +23,7 @@ public class Kmp {
 			
 			//to do
 		}
+		return pi;
 	}
 
 	public void kmpMatch(String t, String p){
