@@ -20,9 +20,9 @@ public class Kmp {
 			while (k > 0 && (p.charAt(k+1) != p.charAt(q))){
 				k = pi[k];
 			}
+			
 			//to do
 		}
-		return pi;
 	}
 
 	public void kmpMatch(String t, String p){
