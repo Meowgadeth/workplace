@@ -12,7 +12,17 @@ public class Kmp {
 	}
 	
 	public int[] computePrefix(String p){
-		return new int[] {1,2,3};
+		int m = p.length();
+		int[]  pi = new int[m];
+		pi[1] = 0;
+		int k = 0;
+		for (int q = 2; q <= m; q++){
+			while (k > 0 && (p.charAt(k+1) != p.charAt(q))){
+				k = pi[k];
+			}
+			
+			//to do
+		}
 	}
 
 	public void kmpMatch(String t, String p){
