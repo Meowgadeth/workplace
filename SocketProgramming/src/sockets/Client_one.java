@@ -11,6 +11,7 @@ public class Client_one {
 		
 	}
 	
+	
 
 	public void run() throws Exception{
 		Socket sock = new Socket("localhost",8888);
