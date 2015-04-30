@@ -5,13 +5,13 @@ public class Kmp {
 	public static void main(String[] args) {
 		Kmp app = new Kmp();
 		String p = "ababaca";  //pattern initialize
-		int[] pi = app.computePrefix();  //prefix function initialize
+		int[] pi = app.computePrefix(p);  //prefix function initialize
 		String t = "bacbababaababaca";   //text initialize
 		
 		app.kmpMatch(t, p);		
 	}
 	
-	public int[] computePrefix(){
+	public int[] computePrefix(String p){
 		return new int[] {1,2,3};
 	}
 
