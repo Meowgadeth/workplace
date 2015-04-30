@@ -6,6 +6,7 @@ public class Client_one {
 
 	public static void main(String[] args) throws Exception{
 		
+		
 		Client_one client = new Client_one();
 		client.run();
 		
