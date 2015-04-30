@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;allKindsOfSort&apos; to &apos;AlgorithmImplementation/src&apos;&#x0D;&#x0A;- Original project: &apos;allKindsOfSort&apos;&#x0D;&#x0A;- Destination element: &apos;AlgorithmImplementation/src&apos;&#x0D;&#x0A;- Original element: &apos;allKindsOfSort/src/allKindsOfSort&apos;" description="Copy package" destination="=AlgorithmImplementation/src" element1="/src&lt;allKindsOfSort" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1430419345175" version="1.0"/>
+</session>
