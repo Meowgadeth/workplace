@@ -1,11 +1,9 @@
 package strstr;
 
-public class Kmp {
-
+public class Kmp {	
 	public static void main(String[] args) {
 		Kmp app = new Kmp();
 		String p = "ababaca";  //pattern initialize
-		int[] pi = app.computePrefix(p);  //prefix function initialize
 		String t = "bacbababaababaca";   //text initialize
 		
 		app.kmpMatch(t, p);		
@@ -14,18 +12,40 @@ public class Kmp {
 	public int[] computePrefix(String p){
 		int m = p.length();
 		int[]  pi = new int[m];
-		pi[1] = 0;
+		pi[0] = 0;
 		int k = 0;
-		for (int q = 2; q <= m; q++){
-			while (k > 0 && (p.charAt(k+1) != p.charAt(q))){
-				k = pi[k];
+		for (int q = 1; q < m; q++){
+			while (k > 0 && (p.charAt(k) != p.charAt(q))){
+				k = pi[k-1];
 			}
-			//to do
+			System.out.println("k here is "+ k);
+			if (p.charAt(k) == p.charAt(q)){
+				k++;
+			}
+			pi[q] = k;
 		}
+		for (int i = 0; i < pi.length; i++){
+			System.out.print(pi[i]+" ");
+		}
+		
 		return pi;
 	}
 
 	public void kmpMatch(String t, String p){
-		//to do
+		int n = t.length();
+		int m = p.length();
+		int[] pi = computePrefix(p);
+		int q = 0;
+		for (int i = 0; i < n; i++){
+			while (q > 0 && (p.charAt(q) != t.charAt(i))){
+				q = pi[q - 1];
+			}
+			if (p.charAt(q) == t.charAt(i)){
+				q = q + 1;
+			}
+			if (q == m){
+				System.out.println("pattern occurs with shift "+ (i - m));
+			}
+		}
 	}
 }
