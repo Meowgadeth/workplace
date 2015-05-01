@@ -9,7 +9,7 @@ public class Kmp {
 		app.kmpMatch(t, p);		
 	}
 	
-	public int[] computePrefix(String p){
+	public static int[] computePrefix(String p){
 		int m = p.length();
 		int[]  pi = new int[m];
 		pi[0] = 0;
@@ -18,7 +18,6 @@ public class Kmp {
 			while (k > 0 && (p.charAt(k) != p.charAt(q))){
 				k = pi[k-1];
 			}
-			System.out.println("k here is "+ k);
 			if (p.charAt(k) == p.charAt(q)){
 				k++;
 			}
@@ -27,11 +26,10 @@ public class Kmp {
 		for (int i = 0; i < pi.length; i++){
 			System.out.print(pi[i]+" ");
 		}
-		
+		System.out.println();
 		return pi;
 	}
-
-	public void kmpMatch(String t, String p){
+	public static boolean kmpMatch(String t, String p){
 		int n = t.length();
 		int m = p.length();
 		int[] pi = computePrefix(p);
@@ -44,8 +42,10 @@ public class Kmp {
 				q = q + 1;
 			}
 			if (q == m){
-				System.out.println("pattern occurs with shift "+ (i - m));
+				//System.out.println("pattern occurs with shift "+ (i - m));
+				return true;
 			}
 		}
+		return false;
 	}
 }
